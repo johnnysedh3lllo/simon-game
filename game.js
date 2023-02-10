@@ -10,6 +10,12 @@ const playSound = function (name) {
   currentClickSound.play();
 };
 
+const starter = function () {
+  $("#level-title").text(`level ${level}`);
+  nextSequence();
+  started = true;
+};
+
 const animatePress = function (currentColor) {
   $(`#${currentColor}`).addClass("pressed");
 
@@ -42,19 +48,13 @@ $(".btn").click(function () {
 
 $(document).keypress(function () {
   if (!started) {
-    $("#level-title").text(`level ${level}`);
-    nextSequence();
-    started = true;
+    starter();
   }
 });
 
 $(".start-btn").click(function () {
-  $("#level-title").text(`level ${level}`);
-  nextSequence();
-  started = true;
+  starter();
 });
-
-
 
 const checkAnswer = function (currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
