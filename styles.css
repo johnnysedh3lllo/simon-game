@@ -10,6 +10,19 @@ body {
   color: #fef2bf;
 }
 
+.start-btn{
+  color: black
+background-color: #fef2bf;
+}
+
+.start-btn:hover{
+  color: #fef2bf
+background-color: black;
+cursor: pointer;
+}
+
+
+
 .container {
   display: block;
   width: 60%;
