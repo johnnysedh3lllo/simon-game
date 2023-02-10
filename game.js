@@ -40,13 +40,21 @@ $(".btn").click(function () {
   animatePress(userChosenColor);
 });
 
-$(document).keypress(function (event) {
+$(document).keypress(function () {
   if (!started) {
     $("#level-title").text(`level ${level}`);
     nextSequence();
     started = true;
   }
 });
+
+$(".start-btn").click(function () {
+  $("#level-title").text(`level ${level}`);
+  nextSequence();
+  started = true;
+});
+
+
 
 const checkAnswer = function (currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
