@@ -11,12 +11,13 @@ body {
 }
 
 .start-btn{
-  color: black
+  color: black;
 background-color: #fef2bf;
+padding: 1rem;
 }
 
 .start-btn:hover{
-  color: #fef2bf
+  color: #fef2bf;
 background-color: black;
 cursor: pointer;
 }
